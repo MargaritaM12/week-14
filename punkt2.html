@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Изменение фона div-ов по клику на них</title>
+        <style>
+            .color-panel {
+                position: absolute;
+                background-color: rgba(254, 255, 182, 0.741);
+                height: 110px;
+                padding: 15px 5px 5px;
+
+            }
+            .color-panel div {
+                height: 100px;
+                width: 100px;
+                border-radius: 30px;
+                float: left;
+                margin: 5px;
+            }
+
+            #red {
+                background-color: #ff6b6b;
+            }
+            #pink {
+                background-color: #ff53d7;
+            }
+            #blue {
+                background-color: #71f8ff;
+            }
+            #yellow {
+                background-color: #f1fa73;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="color-panel">
+            <div id="red" data-color="#ff6b6b" onclick="changeColor('red')"></div>
+            <div id="pink" data-color="#ff53d7" onclick="changeColor('pink')"></div>
+            <div id="blue" data-color="#71f8ff" onclick="changeColor('blue')"></div>
+            <div id="yellow" data-color="#f1fa73" onclick="changeColor('yellow')"></div>
+        </div>
+
+        <script>
+            function changeColor(colorValue) {
+                document.body.style.background = document
+                    .getElementById(colorValue)
+                    .dataset
+                    .color;
+            }
+        </script>
+    </body>
+</html>

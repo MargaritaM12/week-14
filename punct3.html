@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Галерея</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+        <style>
+            li {
+                list-style-type: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Галерея
+        </h1>
+        <div class="gallery">
+            <ul>
+                <li><img src="assets/1.jpg" height="400px" width="400px" alt="кот"/></li>
+                <li><img src="assets/2.jpg" height="400px" width="400px" alt="кот"/></li>
+                <li><img src="assets/3.jpg" height="400px" width="400px" alt="кот"/></li>
+            </ul>
+        </div>
+        <button class="prev">Назад</button>
+        <button class="next">Вперед</button>
+        <script type="text/javascript">
+            <script
+                type="text/javascript"
+                src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+            <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+            <script src="jquery.js"></script>
+            <script src="jquery.jcarousellite.js"></script>
+            <script> {
+            $(function() { $(".any-class").jCarouselLite({ btnNext: ".next", btnPrev:
+            ".prev" }); });}
+        </script>
+        </script>
+    </body>
+</html>
